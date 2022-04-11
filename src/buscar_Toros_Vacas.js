@@ -13,6 +13,16 @@ function buscar(cadSecreta, Intento){
       {
           res = res + "!";
       }
+      else
+      {
+        for(let j = 0;j<cadSecreta.length;j++)
+        {
+          if(cadSecreta[j] === Intento[i])
+          {
+            res = res + "*";
+          }
+        }
+      }
     }
   }
   return res;
