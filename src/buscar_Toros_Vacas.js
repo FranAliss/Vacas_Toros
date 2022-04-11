@@ -7,9 +7,12 @@ function buscar(cadSecreta, Intento){
   }
   else
   {
-    if(cadSecreta === Intento)
+    for(let i = 0;i<cadSecreta.length;i++)
     {
-      res = "!!!!"; 
+      if(cadSecreta[i] === Intento[i])
+      {
+          res = res + "!";
+      }
     }
   }
   return res;
