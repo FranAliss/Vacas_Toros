@@ -1,30 +1,24 @@
 
 function buscar(cadSecreta, Intento){
   let res = "";
-  if(cadSecreta === "")
+  for(let i = 0;i<cadSecreta.length;i++)
   {
-    res = "";
-  }
-  else
-  {
-    for(let i = 0;i<cadSecreta.length;i++)
+    if(cadSecreta[i] === Intento[i])
     {
-      if(cadSecreta[i] === Intento[i])
+      res = res + "!";
+    }
+    else
+    {
+      for(let j = 0;j<cadSecreta.length;j++)
       {
-          res = res + "!";
-      }
-      else
-      {
-        for(let j = 0;j<cadSecreta.length;j++)
+        if(cadSecreta[j] === Intento[i])
         {
-          if(cadSecreta[j] === Intento[i])
-          {
-            res = res + "*";
-          }
+          res = res + "*";
         }
       }
     }
   }
+
   return res;
 }
 
