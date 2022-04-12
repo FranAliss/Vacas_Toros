@@ -1,4 +1,5 @@
 import buscar from "./buscar_Toros_Vacas.js"
+import buscarBisonte from "./buscar_bisonte.js"
 
 describe("Verificar toros y vacas", () => {
   it("Deberia devolver vacio si la cadena secreta esta vacia", () => {
@@ -22,5 +23,11 @@ describe("Verificar toros y vacas", () => {
   it("Deberia devolver una ternera ", () => {
     expect(buscar("1234","9499")).toEqual("*#");
   });  
+});
+
+describe("Buscar Bisontes", () => {
+  it("Deberia devolver vacio si la cadena secreta esta vacia", () => {
+    expect(buscarBisonte("")).toEqual("");
+  });
 });
 
