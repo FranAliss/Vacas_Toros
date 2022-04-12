@@ -29,5 +29,8 @@ describe("Buscar Bisontes", () => {
   it("Deberia devolver vacio si la cadena secreta esta vacia", () => {
     expect(buscarBisonte("")).toEqual("");
   });
+  it("Deberia devolver dos bisontes por los numeros 3 y 5", () => {
+    expect(buscarBisonte("4235")).toEqual("%%");
+  });
 });
 
