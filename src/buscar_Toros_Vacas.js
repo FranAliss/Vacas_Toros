@@ -16,9 +16,15 @@ function buscar(cadSecreta, Intento){
           res = res + "*";
         }
       }
+      for(let a = 0;a<cadSecreta.length;a++)
+      {
+        if(parseInt(cadSecreta[a]) + 1  === parseInt(Intento[i]) || parseInt(cadSecreta[a]) - 1  === parseInt(Intento[i]))
+        {
+          res = res + "#";
+        }
+      }
     }
   }
-
   return res;
 }
 
