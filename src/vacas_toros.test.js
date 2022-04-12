@@ -8,19 +8,19 @@ describe("Verificar toros y vacas", () => {
   it("Deberia devolver cuatro toros", () => {
     expect(buscar("1234","1234")).toEqual("!!!!");
   });
-  it("Deberia devolver un toro", () => {
+  it("Deberia devolver un toro y un ternero", () => {
     expect(buscar("1234","1567")).toEqual("!#");
   });
-  it("Deberia devolver nada (terneros ahora)", () => {
+  it("Deberia devolver nada (un ternero ahora)", () => {
     expect(buscar("1234","5678")).toEqual("#");
   });
-  it("Deberia devolver dos toros", () => {
+  it("Deberia devolver dos toros y un ternero", () => {
     expect(buscar("1234","1564")).toEqual("!#!");
   });
-  it("Deberia devolver dos vacas", () => {
+  it("Deberia devolver dos vacas y tres terneros", () => {
     expect(buscar("1234","4368")).toEqual("*#*##");
   });
-  it("Deberia devolver una ternera ", () => {
+  it("Deberia devolver una ternera y una vaca ", () => {
     expect(buscar("1234","9499")).toEqual("*#");
   });  
 });
